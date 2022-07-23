@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { EventCard, EventCardTitle } from '../styles/Event.style';
 import Axios from 'axios';
 import { AgGridReact } from 'ag-grid-react';
-import server from '../../config/server';
+import { server } from '../config/server';
 
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.min.css';

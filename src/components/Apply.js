@@ -3,7 +3,7 @@ import { ApplicationContainer, ApplicationForm, ApplicationTitle, ApplicationQue
 import NavbarApply from './NavbarApply';
 import { Events } from '../utils/Events';
 import Axios from 'axios';
-import server from '../../config/server';
+import { server } from '../config/server';
 
 let queries = [
 	{
