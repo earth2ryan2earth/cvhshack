@@ -1,5 +1,19 @@
 import React, { useState } from 'react';
-import { ApplicationContainer, ApplicationForm, ApplicationTitle, ApplicationQueryLabel, ApplicationQuery, ApplicationQueryContainer, ReceiptContainer, ReceiptContent, ReceiptEvent, ReceiptInfo, ReceiptSubtitle, ReceiptSection, ReceiptLI } from '../styles/Apply.style';
+import {
+	ApplicationContainer,
+	ApplicationForm,
+	ApplicationTitle,
+	ApplicationQueryLabel,
+	ApplicationQuery,
+	ApplicationQueryContainer,
+	ReceiptContainer,
+	ReceiptContent,
+	ReceiptEvent,
+	ReceiptInfo,
+	ReceiptSubtitle,
+	ReceiptSection,
+	ReceiptLI,
+} from '../styles/Apply.style';
 import NavbarApply from './NavbarApply';
 import { Events } from '../utils/Events';
 import Axios from 'axios';
@@ -39,7 +53,9 @@ let queries = [
 let checkboxes = [];
 let eventDates = [];
 
-const sortedEvents = Events.slice().sort((a, b) => new Date(a.title) - new Date(b.title));
+const sortedEvents = Events.slice().sort(
+	(a, b) => new Date(a.title) - new Date(b.title),
+);
 const NOW = new Date().getTime();
 
 for (let i = 0; i < sortedEvents.length; i++) {
@@ -58,7 +74,7 @@ sortedEvents.map((event, id) => {
 				day: '2-digit',
 				timezone: 'America/Los_Angeles',
 			})
-			.replace(/-+/g, '_')
+			.replace(/-+/g, '_'),
 	);
 	return checkboxes.push(
 		id === 0
@@ -73,7 +89,7 @@ sortedEvents.map((event, id) => {
 					type: 'checkbox',
 					name: 'event',
 					required: false,
-			  }
+			  },
 	);
 });
 
@@ -109,7 +125,9 @@ function Apply() {
 	};
 
 	const handleCheckChange = (position) => {
-		const updatedCheckState = data.events.map((event, index) => (index === position ? !event : event));
+		const updatedCheckState = data.events.map((event, index) =>
+			index === position ? !event : event,
+		);
 		setData((prevData) => ({ ...prevData, events: updatedCheckState }));
 	};
 
@@ -118,24 +136,52 @@ function Apply() {
 			<NavbarApply />
 			<ApplicationContainer id='top'>
 				<ApplicationTitle>Registration Form</ApplicationTitle>
-				<ApplicationForm id='form' className='clr-white'>
+				<ApplicationForm
+					id='form'
+					className='clr-white'
+				>
 					{queries.map((query, key) => {
 						return (
-							<ApplicationQueryContainer name={query.name} key={key}>
-								<ApplicationQueryLabel htmlFor={query.name}>{query.title}</ApplicationQueryLabel>
-								<ApplicationQuery type={query.type} name={query.name} onChange={(e) => handleTextChange(e, query.name)} placeholder={query.placeholder} required={query.required} />
+							<ApplicationQueryContainer
+								name={query.name}
+								key={key}
+							>
+								<ApplicationQueryLabel htmlFor={query.name}>
+									{query.title}
+								</ApplicationQueryLabel>
+								<ApplicationQuery
+									type={query.type}
+									name={query.name}
+									onChange={(e) => handleTextChange(e, query.name)}
+									placeholder={query.placeholder}
+									required={query.required}
+								/>
 							</ApplicationQueryContainer>
 						);
 					})}
 					{checkboxes.map((query, key) => {
 						return (
-							<ApplicationQueryContainer name={query.name} key={key}>
-								<ApplicationQueryLabel htmlFor={query.name}>{query.title}</ApplicationQueryLabel>
-								<ApplicationQuery type={query.type} name={query.name} onChange={() => handleCheckChange(key)} required={query.required} />
+							<ApplicationQueryContainer
+								name={query.name}
+								key={key}
+							>
+								<ApplicationQueryLabel htmlFor={query.name}>
+									{query.title}
+								</ApplicationQueryLabel>
+								<ApplicationQuery
+									type={query.type}
+									name={query.name}
+									onChange={() => handleCheckChange(key)}
+									required={query.required}
+								/>
 							</ApplicationQueryContainer>
 						);
 					})}
-					<ApplicationQuery type='submit' value='submit' onClick={(e) => addEntrant(e)} />
+					<ApplicationQuery
+						type='submit'
+						value='submit'
+						onClick={(e) => addEntrant(e)}
+					/>
 				</ApplicationForm>
 			</ApplicationContainer>
 			{receipt && (

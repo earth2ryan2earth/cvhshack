@@ -102,7 +102,7 @@ export default createGlobalStyle`
   h2 {
     font-weight: 900;
     color: #c62368;
-    font-size: 1.25rem;
+    font-size: 2rem;
     line-height: 1.3;
   }
 
@@ -133,7 +133,7 @@ export default createGlobalStyle`
     gap: var(--gap, 1rem);
   }
 
-  .info, .about {
+  .info, .about, .officers {
     padding: 3rem 4rem;
 
     @media (min-width: 56.25em) {
