@@ -1,5 +1,4 @@
 import React from 'react';
-import NavbarApply from './NavbarApply';
 import { EntrantsContainer } from '../styles/Entrants.style';
 import Event from './Event';
 import { Events } from '../utils/Events';
@@ -7,8 +6,10 @@ import { Events } from '../utils/Events';
 function Entrants() {
 	return (
 		<>
-			<NavbarApply />
-			<EntrantsContainer id='top' className='clr-white'>
+			<EntrantsContainer
+				id='top'
+				className='clr-white'
+			>
 				{Events.slice()
 					.sort((a, b) => new Date(a.title) - new Date(b.title))
 					.map((event, index) => {

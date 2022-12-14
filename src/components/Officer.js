@@ -7,7 +7,6 @@ import {
 } from '../styles/Officer.style';
 
 function Officer(props) {
-	console.log(props);
 	return (
 		<Card className='clr-white officer-card'>
 			<CardImg
@@ -15,9 +14,7 @@ function Officer(props) {
 				alt={props.name}
 			/>
 			<CardContent>
-				<a href='#top'>
-					<CardTitle>{props.name}</CardTitle>
-				</a>
+				<CardTitle>{props.name}</CardTitle>
 				<CardDescription>{props.testimonial}</CardDescription>
 			</CardContent>
 		</Card>

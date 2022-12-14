@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GlobalStyle from './styles/Global.style';
 import ScrollToTop from './functions/ScrollToTop';
+import Navbar from './components/Navbar';
 
 // FOR CLIENT in 'React Attempt'/client
 // npm install react-router-dom
@@ -27,11 +28,24 @@ function App() {
 		<Router>
 			<GlobalStyle />
 			<ScrollToTop />
+			<Navbar />
 			<Routes>
-				<Route path='/' element={<PageContent />} />
-				<Route path='/apply' element={<Apply />} />
-				<Route path='/sponsors' element={<Sponsors />} />
-				<Route path='/events' element={<Entrants />} />
+				<Route
+					path='/'
+					element={<PageContent />}
+				/>
+				<Route
+					path='/apply'
+					element={<Apply />}
+				/>
+				<Route
+					path='/sponsors'
+					element={<Sponsors />}
+				/>
+				<Route
+					path='/events'
+					element={<Entrants />}
+				/>
 			</Routes>
 			<Footer />
 		</Router>

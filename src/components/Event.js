@@ -6,6 +6,7 @@ import { server } from '../config/server';
 
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.min.css';
+import Navbar from './Navbar';
 
 function Event(props) {
 	const [dataVisible, setDataVisible] = useState(false);
@@ -49,6 +50,7 @@ function Event(props) {
 
 	return (
 		<>
+			<Navbar />
 			<EventCard
 				className='show-entrants'
 				aria-controls={props.title}
@@ -64,8 +66,23 @@ function Event(props) {
 			>
 				<EventCardTitle>{props.title}</EventCardTitle>
 			</EventCard>
-			<EventCard id={props.title} className='fullwidth ag-theme-alpine-dark' data-visible={dataVisible} tabIndex={tabIndex}>
-				{eventData.code ? 'No Table Data.' : <AgGridReact rowData={eventData} columnDefs={columnDefs} defaultColDef={defaultColDef} animateRows={true} rowSelection='multiple' />}
+			<EventCard
+				id={props.title}
+				className='fullwidth ag-theme-alpine-dark'
+				data-visible={dataVisible}
+				tabIndex={tabIndex}
+			>
+				{eventData.code ? (
+					'No Table Data.'
+				) : (
+					<AgGridReact
+						rowData={eventData}
+						columnDefs={columnDefs}
+						defaultColDef={defaultColDef}
+						animateRows={true}
+						rowSelection='multiple'
+					/>
+				)}
 			</EventCard>
 		</>
 	);

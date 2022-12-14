@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const OfficerContainer = styled.div`
-	padding: 2rem;
+	padding-top: 2rem;
 	height: 100%;
 	display: grid;
 	--grid-layout-gap: 3rem;
@@ -15,11 +15,13 @@ export const OfficerContainer = styled.div`
 	);
 
 	grid-template-columns: repeat(
-		auto-fill,
+		auto-fit,
 		minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
 	);
 
 	gap: var(--grid-layout-gap);
+
+	justify-items: center;
 
 	/* grid-template-columns: repeat(auto-fit, minmax(100%/4, 1fr); */
 `;

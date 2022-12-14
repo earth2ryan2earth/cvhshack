@@ -1,5 +1,4 @@
 import React from 'react';
-import NavbarSponsors from './NavbarSponsors';
 import { SponsorContainer } from '../styles/Sponsors.style';
 import Sponsor from './Sponsor';
 
@@ -29,8 +28,10 @@ const sponsors = [
 function Sponsors() {
 	return (
 		<>
-			<NavbarSponsors />
-			<SponsorContainer id='top' className='sponsor-grid'>
+			<SponsorContainer
+				id='top'
+				className='sponsor-grid'
+			>
 				{sponsors.map((sponsor, key) => {
 					return (
 						<Sponsor

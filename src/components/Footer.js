@@ -1,17 +1,19 @@
-import React from "react";
-import {
-  PrimaryFooter,
-  Logo,
-} from '../styles/Footer.style';
+import React from 'react';
+import { PrimaryFooter, Logo } from '../styles/Footer.style';
 import LogoSVG from '../assets/CVFalcon.svg';
+import { HashLink } from 'react-router-hash-link';
 
 function Footer() {
-
-  return (
-    <PrimaryFooter id='bottom' className='flex'>
-      <a href="#top"><Logo src={LogoSVG}></Logo></a>
-    </PrimaryFooter>
-  );
+	return (
+		<PrimaryFooter
+			id='bottom'
+			className='flex'
+		>
+			<HashLink to='#top'>
+				<Logo src={LogoSVG}></Logo>
+			</HashLink>
+		</PrimaryFooter>
+	);
 }
 
 export default Footer;

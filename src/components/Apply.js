@@ -14,7 +14,6 @@ import {
 	ReceiptSection,
 	ReceiptLI,
 } from '../styles/Apply.style';
-import NavbarApply from './NavbarApply';
 import { Events } from '../utils/Events';
 import Axios from 'axios';
 import { server } from '../config/server';
@@ -133,7 +132,6 @@ function Apply() {
 
 	return (
 		<>
-			<NavbarApply />
 			<ApplicationContainer id='top'>
 				<ApplicationTitle>Registration Form</ApplicationTitle>
 				<ApplicationForm
