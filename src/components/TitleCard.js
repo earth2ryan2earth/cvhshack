@@ -19,7 +19,6 @@ function TitleCard() {
 	useEffect(() => {
 		const [SetInterval, ClearInterval] = getCountdown();
 		pathname === '/' && SetInterval();
-		console.log('hello');
 		return ClearInterval;
 	}, [pathname]);
 

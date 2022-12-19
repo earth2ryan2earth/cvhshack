@@ -3,7 +3,7 @@ import { OfficerContainer } from '../styles/Officers.style';
 import { officers } from '../utils/Officers';
 import Officer from './Officer';
 
-function Sponsors() {
+function Officers() {
 	return (
 		<div
 			id='officers'
@@ -29,4 +29,4 @@ function Sponsors() {
 	);
 }
 
-export default Sponsors;
+export default Officers;

@@ -1,22 +1,24 @@
-import React from "react";
-import {
-  Info,
-  InfoTitle,
-  InfoContent
-} from '../styles/InfoCard.style';
+import React from 'react';
+import { Info, InfoTitle, InfoContent } from '../styles/InfoCard.style';
 
 function InfoCard() {
-  return (  
-    <Info id='info' className='info clr-white' >
-      <InfoTitle className="info-title" >Event Information</InfoTitle>
-      <InfoContent className="info-content" >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet lectus proin nibh nisl condimentum id venenatis a. Duis at tellus at urna condimentum. Iaculis at erat pellentesque adipiscing. Amet nulla facilisi morbi tempus iaculis urna id volutpat. Purus gravida quis blandit turpis cursus in hac habitasse. Sed egestas egestas fringilla phasellus faucibus. Lectus urna duis convallis convallis tellus id interdum. Amet dictum sit amet justo donec enim. Ac turpis egestas integer eget aliquet nibh praesent. Nam aliquam sem et tortor. Cursus in hac habitasse platea dictumst quisque. Ridiculus mus mauris vitae ultricies.
-      </InfoContent>
-      <InfoContent className="info-content" >
-        Pulvinar elementum integer enim neque volutpat ac tincidunt. Ut sem viverra aliquet eget. Aliquet lectus proin nibh nisl condimentum id venenatis. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Et ultrices neque ornare aenean euismod elementum nisi quis. Faucibus nisl tincidunt eget nullam non. Turpis in eu mi bibendum neque. Ultrices eros in cursus turpis. Cursus in hac habitasse platea dictumst quisque sagittis purus. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Lobortis mattis aliquam faucibus purus. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Est ullamcorper eget nulla facilisi etiam dignissim. Cras semper auctor neque vitae tempus quam pellentesque. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Faucibus a pellentesque sit amet porttitor eget dolor morbi non. Maecenas sed enim ut sem viverra. Ornare arcu odio ut sem nulla pharetra diam.
-      </InfoContent>
-    </Info>
-  );
+	return (
+		<Info
+			id='info'
+			className='info clr-white'
+		>
+			<InfoTitle className='info-title'>Event Information</InfoTitle>
+			<InfoContent className='info-content'>
+				Join us starting at 9am for a jam-packed, fun filled 24 hour hackathon
+				at Crescenta Valley High School! Throughout the event, you'll be able to
+				interact and bond with fellow high school students through fun games and
+				activities and be able to enhance your computer programming skills
+				through workshops. In addition, you'll be able to listen to industry
+				speakers and gain personalized feedback from judges. All levels of
+				programming are wholeheartedly welcome, and we hope to see you there!
+			</InfoContent>
+		</Info>
+	);
 }
 
 export default InfoCard;

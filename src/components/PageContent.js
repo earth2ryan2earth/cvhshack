@@ -10,7 +10,9 @@ function PageContent() {
 			<div className='page-content'>
 				<TitleCard className='title-card' />
 				<InfoCard className='info-card' />
+				<hr />
 				<AboutCard className='about-card' />
+				<hr />
 				<Officers className='officers-card' />
 			</div>
 		</>

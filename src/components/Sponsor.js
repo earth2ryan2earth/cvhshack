@@ -1,20 +1,16 @@
-import {
-	Card,
-	CardImg,
-	CardContent,
-	CardTitle,
-	CardDescription,
-} from '../styles/Sponsor.style';
+import { Card, CardImg, CardContent, CardTitle } from '../styles/Sponsor.style';
 
 function Sponsor(props) {
 	return (
 		<Card className='clr-white  sponsor-card'>
-			<CardImg src={props.img} alt='sponsor' />
+			<CardImg
+				src={props.img}
+				alt='sponsor'
+			/>
 			<CardContent>
-				<a href='#top'>
+				<a href={props.href}>
 					<CardTitle>{props.title}</CardTitle>
 				</a>
-				<CardDescription>{props.text}</CardDescription>
 			</CardContent>
 		</Card>
 	);

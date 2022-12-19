@@ -106,6 +106,14 @@ export default createGlobalStyle`
     line-height: 1.3;
   }
 
+  hr {
+    width: 100%;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(0.25turn, transparent, hsl(0 0% 100%), transparent);
+    margin-block: 3rem;
+  }
+
   a, a:any-link {
     text-decoration: none;
   }
@@ -134,7 +142,7 @@ export default createGlobalStyle`
   }
 
   .info, .about, .officers {
-    padding: 3rem 4rem;
+    padding-inline: clamp(4rem, 25vw, 20%);
 
     @media (min-width: 56.25em) {
       padding: 3rem 20%;

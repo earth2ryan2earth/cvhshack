@@ -41,7 +41,9 @@ export const TitleToApplyContainer = styled.div`
 	color: #34c9e0;
 	&:hover {
 		transform: scale(1.2);
-		color: #c62368;
+		& * {
+			font-weight: bolder;
+		}
 	}
 `;
 

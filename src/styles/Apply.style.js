@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ApplicationContainer = styled.div`
 	display: block;
-	/* margin-bottom: 10rem; */
+	min-height: 100vh;
 `;
 
 export const ApplicationTitle = styled.h2`

@@ -1,27 +1,19 @@
 import React from 'react';
+import Falkon589 from '../assets/sponsors/Falkon-589-Robotics.png';
+import Salesforce from '../assets/sponsors/Salesforce.png';
 import { SponsorContainer } from '../styles/Sponsors.style';
 import Sponsor from './Sponsor';
 
 const sponsors = [
 	{
-		img: 'https://unsplash.it/400/200',
-		title: 'Sponsor 1',
-		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, animi.',
+		img: Salesforce,
+		title: 'Salesforce',
+		href: 'https://www.salesforce.com/',
 	},
 	{
-		img: 'https://unsplash.it/300/300',
-		title: 'Sponsor 2',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, autem?',
-	},
-	{
-		img: 'https://unsplash.it/400/400',
-		title: 'Sponsor 3',
-		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, sit!',
-	},
-	{
-		img: 'https://unsplash.it/200/400',
-		title: 'Sponsor 4',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, magni?',
+		img: Falkon589,
+		title: 'Falkon Robotics',
+		href: 'https://www.cvrobots.com/',
 	},
 ];
 
@@ -38,7 +30,7 @@ function Sponsors() {
 							key={key}
 							img={sponsor.img}
 							title={sponsor.title}
-							text={sponsor.text}
+							href={sponsor.href}
 						/>
 					);
 				})}
